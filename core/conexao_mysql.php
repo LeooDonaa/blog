@@ -21,4 +21,4 @@ function conecta() :mysqli
 function desconecta($conexao){
     mysqli_close($conexao);
 }
-?>
+?> 

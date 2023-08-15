@@ -4,7 +4,7 @@ require_once '../core/conexao_mysql.php';
 require_once '../core/sql.php';
 require_once '../core/mysql.php';
 
-insert_teste ('Leonardo', 'leonardo.dona@ifsp.edu.br', '123456');
+insert_teste ('Ale', 'a.campos@ifsp.edu.br', 'alexander321');
 buscar_teste();
 update_teste(38, 'murilo', 'silva@gmail.com');
 buscar_teste();
@@ -30,5 +30,8 @@ function update_teste($id, $nome, $email): void{
     $criterio = [['id', '=', $id]];
     atualiza('usuario', $dados, $criterio);
 }
+
+
+
 
 ?>

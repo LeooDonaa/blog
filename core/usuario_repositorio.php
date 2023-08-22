@@ -36,7 +36,7 @@ switch($acao){
             ];
             
             $criterio =[
-                ['id', '-', $id]
+                ['id', '=', $id]
                 ];
 
             atualiza(

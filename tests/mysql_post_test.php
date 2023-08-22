@@ -6,10 +6,10 @@
 
     insert_teste('10', 'muito bom', 1, date('Y-m-d H:i:s'));
     insert_teste('10', 'muito bom', 2, date('Y-m-d H:i:s'));
-    insert_teste('10', 'muito bom', 3, date('Y-m-d H:i:s'));
+    insert_teste('teste', 'teste', 3, date('Y-m-d H:i:s'));
     buscar_teste();
 
-    function insert_teste($titulo, $texto, $usuario_id, $data_criacao, $data_postagem) : void
+    function insert_teste($titulo, $texto, $usuario_id, $data_postagem) : void
     {
         $dados = ['titulo' => $titulo
                 , 'texto' => $texto

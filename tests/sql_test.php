@@ -2,8 +2,8 @@
     require_once '../core/sql.php';
 
     $id = 1;
-    $nome = 'LeonardoDona';
-    $email = "leonardo.dona@ifsp.edu.br";
+    $nome = 'Leonardo';
+    $email = "leonardo.dona@aluno.ifsp.edu.br";
     $senha = 'leonardo123';
     $dados = ['nome' => $nome,
               'email' => $email,
@@ -21,17 +21,17 @@
     
     //Teste geração INSERT
     $instrucao = insert ($entidade, $dados);
-    echo $instrucao . "<BR>";
+    echo $instrucao . "<br>";
 
     //Teste geração UPDATE
     $instrucao = update($entidade, $dados, $criterio);
-    echo $instrucao.'<BR>';
+    echo $instrucao.'<br>';
 
     //Teste geração SELECT 
     $instrucao = select($entidade, $campos, $criterio);
-    echo $instrucao.'<BR>';
+    echo $instrucao.'<br>';
 
     //Teste geração DELETE
     $instrucao = delete($entidade, $criterio);
-    echo $instrucao.'<BR>';
+    echo $instrucao.'<br>';
 ?>

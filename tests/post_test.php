@@ -4,21 +4,21 @@ require_once '../core/conexao_mysql.php';
 require_once '../core/sql.php';
 require_once '../core/mysql.php';
 
-insert_teste ('Leonardo', 'leonardo.dona@ifsp.edu.br', 'leonardo123');
+insert_teste ('Post test', 'abaco', '1');
 buscar_teste();
-update_teste(38, 'murilo', 'silva@gmail.com');
-buscar_teste();
+// update_teste(38, 'murilo', 'silva@gmail.com');
+// buscar_teste();
 
 //Teste inserção banco de dados
-function insert_teste($nome, $email, $senha): void{
-    $dados = ['nome' => $nome, 'email' => $email, 'senha' => $senha]; 
-    insere ('usuario', $dados);
+function insert_teste($titulo, $texto, $usuario_id): void{
+    $dados = ['titulo' => $titulo, 'texto' => $texto, 'usuario_id' => $usuario_id]; 
+    insere ('post', $dados);
 }
 
 //Teste select banco de dados
 function buscar_teste(): void{
-    $usuarios = buscar('usuario',['id', 'nome', 'email'], [], '');
-    print_r($usuarios);
+    $post = buscar('post',['id', 'titulo', 'texto', 'usuario_id'], [], '');
+    print_r($post);
 }
 
 //Teste update banco de dados

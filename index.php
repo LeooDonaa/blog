@@ -3,7 +3,7 @@
 
 <head>
     <title> Página inicial | Projeto para Web com PHP</title>
-    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -92,7 +92,7 @@
             </div>
         </div>
     </div>
-    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

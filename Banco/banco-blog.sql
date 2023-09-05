@@ -1,6 +1,6 @@
-drop database if exists blog;
-create database blog;
-use blog;
+DROP DATABASE IF EXISTS blog;
+CREATE DATABASE blog;
+USE blog;
 
 CREATE TABLE usuario (
     id int NOT NULL  AUTO_INCREMENT,

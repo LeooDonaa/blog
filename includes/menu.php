@@ -13,9 +13,11 @@
             <li class="nav-item">
                 <a href="login_formulario.php" class="nav-link">Login</a>
             </li>
-            <li class="nav-item">
+            <?php if (isset($_SESSION['login'])) : ?>
+                <li class="nav-item">
                 <a href="post_formulario.php" class="nav-link">Incluir Post</a>
             </li>
+            <?php endif; ?>
             <?php if ((isset($_SESSION['login']))
                 && ($_SESSION['login']['usuario']['adm'] === 1)
             ) : ?>

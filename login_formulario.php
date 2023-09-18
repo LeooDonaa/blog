@@ -16,7 +16,7 @@
                 <div class="col-md-12">
                     <?php include 'includes/menu.php'; ?>
                 </div>
-                <div class="col-md-10" style="padding-top: 50px;">
+                <div class="col-md-12" style="padding-top: 50px;">
                     <div class="card-header">Login</div>
                     <div class="card-body">
                         <form method="post" action="core/usuario_repositorio.php">

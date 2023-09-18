@@ -1,4 +1,5 @@
 <?php
+// Função para criar uma instrução SQL de inserção de dados em uma entidade.
 function insert(string $entidade, array $dados) : string
 {
     $instrucao = "INSERT INTO {$entidade}";
@@ -11,6 +12,7 @@ function insert(string $entidade, array $dados) : string
     return $instrucao;
 }
 
+// Função para criar uma instrução SQL de atualização de dados em uma entidade.
 function update(string $entidade, array $dados, array $criterio = []) : string
 {
     $instrucao = "UPDATE {$entidade}";
@@ -30,6 +32,7 @@ function update(string $entidade, array $dados, array $criterio = []) : string
     return $instrucao;
 }
 
+// Função para criar uma instrução SQL de exclusão de dados em uma entidade.
 function delete(string $entidade, array $criterio = []) : string
 {
     $instrucao = "DELETE {$entidade}";
@@ -44,6 +47,7 @@ function delete(string $entidade, array $criterio = []) : string
     return $instrucao;
 }
 
+// Função para criar uma instrução SQL de seleção de dados de uma entidade.
 function select(string $entidade, array $campos, array $criterio = [], string $ordem = null) : string
 {
     $instrucao = "SELECT ". implode(', ' ,$campos);

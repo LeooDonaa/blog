@@ -69,7 +69,7 @@
                     <?php if(!isset($_SESSION['login'])): ?>
                     <div class="form-group">
                         <label for="senha">Senha</label>
-                        <input class="form-control" type="text"
+                        <input class="form-control" type="password"
                             require="required" id="senha" name="senha">
                     </div>
                     <?php endif; ?>

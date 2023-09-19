@@ -38,7 +38,7 @@
                         <div class="form-group">
                             <label for="senha">Senha</label>
                             <!-- Campo de entrada para a senha -->
-                            <input class="form-control" type="password" require="required" id="senha" name="senha">
+                            <input class="form-control" type="text" require="required" id="senha" name="senha">
                         </div>
                         <div class="text-right">
                             <!-- Botão de submit para enviar o formulário -->

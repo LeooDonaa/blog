@@ -6,7 +6,7 @@
 <div class="card">
     <div class="card-header">
         <!-- Título do projeto de blog -->
-        <h1> Projeto Blog em PHP - Leonardo Doná </h1>
+        <h1> Projeto Blog em PHP - Leonardo Doná </h1> 
     </div>
     <?php if (isset($_SESSION['login'])): ?>
     <!-- Se o usuário estiver logado, exibe um cumprimento e um link para fazer logout -->

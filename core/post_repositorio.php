@@ -10,12 +10,12 @@ require_once 'sql.php';
 require_once 'mysql.php';
 
 // Loop para limpar e atribuir os dados do array $_POST a variáveis com o mesmo nome.
-foreach($_POST as $indice => $dado) {
+foreach ($_POST as $indice => $dado) {
     $$indice = limparDados($dado);
 }
 
 // Loop para limpar e atribuir os dados do array $_GET a variáveis com o mesmo nome.
-foreach($_GET as $indice => $dado) {
+foreach ($_GET as $indice => $dado) {
     $$indice = limparDados($dado);
 }
 
@@ -23,22 +23,26 @@ foreach($_GET as $indice => $dado) {
 $id = (int)$id;
 
 // Estrutura de switch para determinar a ação com base na variável $acao.
-switch($acao){
+switch ($acao) {
     case 'insert':
         // Define um array $dados com os valores dos campos da postagem.
-        $dados =[
-            'titulo' => $titulo,
-            'texto' => $texto,
-            'data_postagem' => "$data_postagem $hora_postagem",
-            'usuario_id' => $_SESSION['login']['usuario']['id']
-        ];
+        $trimmed = trim($texto); //verifica se só espaços vazios no texto
 
-        // Chama a função insere() para inserir os dados na tabela 'post'.
-        insere(
-            'post',
-            $dados
-        );
+        if (empty($trimmed)) {
+        } else {
+            $dados = [
+                'titulo' => $titulo,
+                'texto' => $texto,
+                'data_postagem' => "$data_postagem $hora_postagem",
+                'usuario_id' => $_SESSION['login']['usuario']['id']
+            ];
 
+            // Chama a função insere() para inserir os dados na tabela 'post'.
+            insere(
+                'post',
+                $dados
+            );
+        }
         break;
 
     case 'update':
@@ -81,4 +85,3 @@ switch($acao){
 
 // Redireciona o usuário de volta para a página inicial.
 header('Location: ../index.php');
-?>
